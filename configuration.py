@@ -15,5 +15,9 @@ def configurar_routes(app):
 
 
 def configurar_banco():
-    db.connect()
-    db.create_tables([Cliente])
+    if db.is_closed():
+        db.connect()
+    db.create_tables([Cliente]) 
+
+
+
