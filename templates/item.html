@@ -1,0 +1,27 @@
+<tr class id="cliente-{{cliente.id}}">
+    <th scope="row">{{cliente.id}}</th>
+    <td>{{cliente.nome}}</td>
+    <td>{{cliente.email}}</td>
+    <td>{{cliente.idade}}</td>
+    <td>{{cliente.cidade}}</td>
+  
+     <td> <button class="btn btn-primary" type="button" c-get="{{url_for('clientes.editar_clientes', cliente_id=cliente.id)}}"
+      c-target="#form-clientes"
+      >Editar
+   </button> 
+   </td>
+
+     <td> <button class="btn btn-danger"  c-delete="{{url_for('clientes.delete_clientes', cliente_id=cliente.id)}}" type="button" 
+        c-remove-closest="tr"> Deletar
+
+     </button>
+      </td>
+
+       <td> <button class="btn btn-secondary" type="button" c-get="{{url_for('clientes.detalhes_cliente', cliente_id=cliente.id)}}"
+      c-target="#exibir-cliente"
+      data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Mostrar</button>
+        
+  
+    </td>
+      </tr>
