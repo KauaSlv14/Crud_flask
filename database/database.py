@@ -3,7 +3,9 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+
 db_proxy= Proxy()
+
 def init_db():
     db= PostgresqlDatabase(
         os.getenv('db_name'),
