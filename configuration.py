@@ -5,8 +5,8 @@ from database.database import init_db
 from models.clientedb import Cliente
 
 def configurar_tudo(app):
-    configurar_routes(app)
     configurar_banco()
+    configurar_routes(app)
 
 def configurar_routes(app):
     app.register_blueprint(home_route)
