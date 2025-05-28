@@ -15,4 +15,4 @@ def init_db():
 
 )
     db_proxy.initialize(db)
-    return db
+    return db_proxy
