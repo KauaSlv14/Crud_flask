@@ -11,4 +11,4 @@ class Cliente(Model):
     data_registro=DateTimeField(default=datetime.datetime.now)
 
     class Meta:
-        database = db_proxy
+        db = db_proxy
