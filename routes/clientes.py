@@ -1,5 +1,5 @@
 from flask import Flask, Blueprint, render_template, request, url_for, request
-from database.database import db 
+from database.database import init_db
 from models.clientedb import Cliente
 home_clientes = Blueprint('clientes', __name__)
 #passo a passo:
