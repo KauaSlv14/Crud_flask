@@ -1,7 +1,8 @@
-from peewee import Model, CharField, DateTimeField
+from peewee import Model, CharField, DateTimeField, Proxy
 from database.database import db_proxy
 import datetime
 
+db_proxy = Proxy()
 
 class Cliente(Model):
     nome = CharField()
