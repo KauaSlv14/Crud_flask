@@ -1,5 +1,6 @@
-from flask import Flask, Blueprint, render_template, request, url_for, request
+from flask import Flask, Blueprint, render_template, url_for, request
 from models.clientedb import Cliente
+
 home_clientes = Blueprint('clientes', __name__)
 #passo a passo:
 
